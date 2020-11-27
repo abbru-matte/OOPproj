@@ -1,13 +1,27 @@
 package model;
-
+/**
+ * <p>
+ * <b>Classe</b> per la gestione di una valuta
+ * </p>
+ * 
+ * @author Abbruzzetti Matteo & Murtezi Adrian
+ * @version 1.0
+ *
+ */
 public class currency {
-	String code;
-	String name;
-	Double value;
-	String data;
-	Double betAmount;
+	
 	/**
-	 * initial constructor
+	 * Attributi
+	 */
+	
+	private String code;
+	private String name;
+	private Double value;
+	private String data;
+	private Double betAmount;
+	
+	/**
+	 * costruttore di default
 	 */
 	public currency() {
 		super();
@@ -19,12 +33,7 @@ public class currency {
 	}
 	
 	/**
-	 * constructor
-	 * @param code
-	 * @param name
-	 * @param value
-	 * @param data
-	 * @param betAmount
+	 * costruttore
 	 */
 	public currency(String code, String name, Double value, String data, Double betAmount) {
 		super();
@@ -35,69 +44,53 @@ public class currency {
 		this.betAmount = betAmount;
 	}
 	
-	/**
-	 * @return the code
-	 */
+	//metodi getter e setter
 	public String getCode() {
 		return code;
 	}
-	/**
-	 * @param code the code to set
-	 */
+	
 	public void setCode(String code) {
 		this.code = code;
 	}
-	/**
-	 * @return the name
-	 */
+	
 	public String getName() {
 		return name;
 	}
-	/**
-	 * @param name the name to set
-	 */
+	
 	public void setName(String name) {
 		this.name = name;
 	}
-	/**
-	 * @return the value
-	 */
+	
 	public Double getValue() {
 		return value;
 	}
-	/**
-	 * @param value the value to set
-	 */
+	
 	public void setValue(Double value) {
 		this.value = value;
 	}
-	/**
-	 * @return the data
-	 */
+	
 	public String getData() {
 		return data;
 	}
-	/**
-	 * @param data the data to set
-	 */
+	
 	public void setData(String data) {
 		this.data = data;
 	}
-	/**
-	 * @return the betAmount
-	 */
+	
 	public Double getBetAmount() {
 		return betAmount;
 	}
-	/**
-	 * @param betAmount the betAmount to set
-	 */
+	
 	public void setBetAmount(Double betAmount) {
 		this.betAmount = betAmount;
 	}
+
 	
-	
-	
+	@Override
+	public String toString() {
+		return "currency [code=" + code + ", name=" + name + ", value=" + value + ", data=" + data + ", betAmount="
+				+ betAmount + "]";
+	}
 	
 
 }
