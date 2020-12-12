@@ -1,36 +1,52 @@
 package Statistiche;
 
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Vector;
-import java.util.Iterator;
-
+import java.util.*;
 
 import model.ModelloStatistiche;
-import model.currencyExchange;
+import model.currencyHistorical;
 import Statistiche.Statistiche;
+
+/**
+ * Classe che contiene metodi per la gestione delle statistiche
+ * 
+ *@author Murtezi Adrian & Abbruzzetti Matteo
+ *
+ */
 
 public class HashMapStats {
 	
-	
-	public static HashMap<String, ModelloStatistiche> createHashMap(ArrayList<currencyExchange> v) {
+	/**
+	 * Metodo che costruisce una HashMap dove vanno inserite i valori 
+	 * e la statistiche richieste, ovvero media, varianza e deviazione standard
+	 * 
+	 * @param v indica un ArrayList di currencyHistorical che contiene 
+	 * 			i valori delle valute in un periodo di tempo
+     * 
+	 * @return  ritorna un HashMap che contiene i tassi di cambio e le statistiche richieste,
+	 * 			
+	 */
+	public static HashMap<String, ModelloStatistiche> createHashMap(ArrayList<currencyHistorical> v) {
 
 		HashMap<String, ModelloStatistiche> hs = new HashMap<String, ModelloStatistiche>();
 		ModelloStatistiche m;
-		ArrayList<Double> vet;
-		currencyExchange e = new currencyExchange();
-
-		for (String s : v.get(0).quotes.keySet()) {
-			
-			 	vet.add(0, e.quotes.values()); 
+		ArrayList<Double> vet = new ArrayList<Double>();
+		currencyHistorical e = new currencyHistorical();
+		double rateCode = 0;
+		Iterator<currencyHistorical> it2 = v.iterator();
+		
+		
+		for (String valuta : v.get(0).quotes.keySet()) {
+			while (it2.hasNext()) {
+				e = it2.next();
+				vet.add(e.quotes.get(valuta));
+			}
 			
 			m = new ModelloStatistiche(vet, Statistiche.media(vet), Statistiche.varianza(vet),
 					Statistiche.DeviazioneStandard(vet));
-			hs.put(s, m);
+			hs.put(valuta, m);
 
 		}
-		hs.remove("USDUSD"); // rimuovo questa conversione poichè inutile
+		
 		return hs;
 	}
 }

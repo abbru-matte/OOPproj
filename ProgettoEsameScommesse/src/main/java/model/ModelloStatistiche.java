@@ -3,6 +3,15 @@ package model;
 import java.util.ArrayList;
 import java.util.Vector;
 
+/**
+ * La classe ModelloStatistiche è un modello per la gestione delle
+ * statistiche. Contiene gli attributi values, media, varianza e 
+ * deviazione standard.
+ * 
+ * @author Murtezi Adrian & Abbruzzetti Matteo
+ *
+ */
+
 public class ModelloStatistiche {
 	
 	private ArrayList<Double> Values;
