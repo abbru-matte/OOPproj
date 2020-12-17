@@ -118,7 +118,7 @@ public class controller {
 	 */
 	
 	@RequestMapping(value = "/valoristorici", method = RequestMethod.GET)
-	public ResponseEntity<Object> GetValoriStorici(@RequestParam(name = "from", defaultValue = "") String from,
+	public ResponseEntity<Object> getValoriStorici(@RequestParam(name = "from", defaultValue = "") String from,
 			@RequestParam(name = "to", defaultValue = "") String to,
 			@RequestParam(name = "currencies", defaultValue = "") String currencies)
 			throws Exception {
