@@ -5,12 +5,18 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+<<<<<<< HEAD
 import java.util.LinkedHashMap;
+=======
+>>>>>>> branch 'master' of https://github.com/abbru-matte/OOPproj
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+<<<<<<< HEAD
 import java.util.Map.Entry;
 import java.util.Set;
+=======
+>>>>>>> branch 'master' of https://github.com/abbru-matte/OOPproj
 import java.util.Comparator;
 
 import model.Currency;
@@ -77,7 +83,11 @@ public class PrincipalService {
 		
 		
 		Currency curr = new Currency();
+<<<<<<< HEAD
 		
+=======
+		sortByValue(listc);
+>>>>>>> branch 'master' of https://github.com/abbru-matte/OOPproj
 		if(listc.get(bet.getCurrency()) == null) {
 			curr.setName(bet.getCurrency());
 			curr.setBetAmount(bet.getAmount());
@@ -96,6 +106,7 @@ public class PrincipalService {
 	}
 	
 	
+<<<<<<< HEAD
 	public Map<String, Currency> getAllcurrencies(){
 		Set<Entry<String, Currency>> entrySet = listc.entrySet();
 		List<Entry<String,Currency>> list = new LinkedList<Entry<String,Currency>>(entrySet);
@@ -112,6 +123,24 @@ public class PrincipalService {
 			 sortedMap.put(item.getKey(), item.getValue());
 		 }
 		return sortedMap;
+=======
+	
+	public void sortByValue(HashMap<String, Currency> hm) 
+	{
+		List<Map.Entry<String, Currency> > list = new LinkedList<Map.Entry<String, Currency> >(hm.entrySet());
+		 Collections.sort(list, new Comparator<Map.Entry<String, Currency>>() { 
+	            public int compare(Map.Entry<String, Currency> o1,  
+	                               Map.Entry<String, Currency> o2) 
+	            { 
+	                return (o2.getValue().getBetAmount()).compareTo(o1.getValue().getBetAmount()); 
+	            } 
+	        }); 
+		 
+	}
+	
+	public Map<String, Currency> getAllcurrencies(){
+		return listc;
+>>>>>>> branch 'master' of https://github.com/abbru-matte/OOPproj
 	}
 	
 	

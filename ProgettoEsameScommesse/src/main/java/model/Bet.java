@@ -4,6 +4,10 @@ import java.util.Date;
 import java.util.HashMap;
 
 import Exceptions.FormatoData;
+<<<<<<< HEAD
+=======
+import Exceptions.NoValuta;
+>>>>>>> branch 'master' of https://github.com/abbru-matte/OOPproj
 import Statistiche.HashMapStats;
 import Statistiche.Statistiche;
 import database.DatabaseHistorical;
@@ -119,4 +123,10 @@ public class Bet {
 		}
 		return bool;
 	}	
+<<<<<<< HEAD
+=======
+	
+	
+	
+>>>>>>> branch 'master' of https://github.com/abbru-matte/OOPproj
 }

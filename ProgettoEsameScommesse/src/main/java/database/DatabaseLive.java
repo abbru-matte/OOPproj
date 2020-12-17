@@ -20,7 +20,11 @@ import model.CurrencyLive;
 
 public class DatabaseLive {
 	
+<<<<<<< HEAD
 	public static final String ACCESS_KEY = "c93d78b47a583604031cef64872013fc";
+=======
+	public static final String ACCESS_KEY = "df67a19946a6f06aa0ad368c10e9f32e";
+>>>>>>> branch 'master' of https://github.com/abbru-matte/OOPproj
     public static final String BASE_URL = "http://api.currencylayer.com/";
     public static final String ENDPOINT = "live";
 

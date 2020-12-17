@@ -50,7 +50,13 @@ public class Currency {
 		this.betAmount = betAmount;
 	}
 	
+<<<<<<< HEAD
 	
+=======
+	public void sommaAmount(Bet b) {
+		betAmount += b.getAmount();
+	}
+>>>>>>> branch 'master' of https://github.com/abbru-matte/OOPproj
 	
 
 }

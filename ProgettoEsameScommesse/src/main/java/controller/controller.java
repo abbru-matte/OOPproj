@@ -38,7 +38,11 @@ public class controller {
 	@Autowired
 	PrincipalService service;
 	
+<<<<<<< HEAD
  
+=======
+	
+>>>>>>> branch 'master' of https://github.com/abbru-matte/OOPproj
 	/**
 	 * Metodo che ci restituisce tutti gli scambi possibili
 	 * @return
@@ -87,7 +91,11 @@ public class controller {
 	 * @throws Exception
 	 */
 	@RequestMapping(value = "/bet", method = RequestMethod.POST)
+<<<<<<< HEAD
 	public ResponseEntity<Object> postBet(@RequestBody Bet bet) throws Exception{
+=======
+	public ResponseEntity<Object> postBet(@RequestBody Bet bet) throws Exception {
+>>>>>>> branch 'master' of https://github.com/abbru-matte/OOPproj
 		service.PlaceBet(bet);
 		service.updateCurrencies(bet);
 		return new ResponseEntity<>(
