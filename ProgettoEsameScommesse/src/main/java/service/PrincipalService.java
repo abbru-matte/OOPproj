@@ -5,9 +5,12 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
 import java.util.Comparator;
 
 import model.Currency;
@@ -74,7 +77,6 @@ public class PrincipalService {
 		
 		
 		Currency curr = new Currency();
-		sortByValue(listc);
 		if(listc.get(bet.getCurrency()) == null) {
 			curr.setName(bet.getCurrency());
 			curr.setBetAmount(bet.getAmount());
@@ -93,24 +95,23 @@ public class PrincipalService {
 	}
 	
 	
-	
-	public void sortByValue(HashMap<String, Currency> hm) 
-	{
-		List<Map.Entry<String, Currency> > list = new LinkedList<Map.Entry<String, Currency> >(hm.entrySet());
-		 Collections.sort(list, new Comparator<Map.Entry<String, Currency>>() { 
-	            public int compare(Map.Entry<String, Currency> o1,  
-	                               Map.Entry<String, Currency> o2) 
+	public Map<String, Currency> getAllcurrencies(){
+		Set<Entry<String, Currency>> entrySet = listc.entrySet();
+		List<Entry<String,Currency>> list = new LinkedList<Entry<String,Currency>>(entrySet);
+		 Collections.sort(list, new Comparator<Entry<String, Currency>>() { 
+	         @Override   
+			 public int compare(Entry<String, Currency> o1,  
+	                               Entry<String, Currency> o2) 
 	            { 
-	                return (o2.getValue().getBetAmount()).compareTo(o1.getValue().getBetAmount()); 
+	                return o2.getValue().getBetAmount().compareTo(o1.getValue().getBetAmount()); 
 	            } 
 	        }); 
-		 
+		 Map<String,Currency> sortedMap = new LinkedHashMap<String,Currency>();
+		 for(Entry<String,Currency> item : list) {
+			 sortedMap.put(item.getKey(), item.getValue());
+			 }
+		return sortedMap;
 	}
-	
-	public Map<String, Currency> getAllcurrencies(){
-		return listc;
-	}
-	
 	
 	
 	public static String getMessaggio(String currency) throws Exception {
@@ -150,5 +151,3 @@ public class PrincipalService {
 	
 
 	
-
-

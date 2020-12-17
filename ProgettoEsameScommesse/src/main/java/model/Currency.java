@@ -7,6 +7,7 @@ package model;
  * @author Abbruzzetti Matteo & Murtezi Adrian
  * @version 1.0
  *
+ *
  */
 public class Currency {
 	
