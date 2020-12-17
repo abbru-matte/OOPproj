@@ -5,7 +5,6 @@ import java.util.HashMap;
 
 import Exceptions.FormatoData;
 import Statistiche.HashMapStats;
-import Statistiche.Statistiche;
 import database.DatabaseHistorical;
 import database.DatabaseLive;
 import service.DateService;
