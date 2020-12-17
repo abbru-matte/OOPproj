@@ -45,7 +45,7 @@ public class controller {
 	 * @throws Exception
 	 */
 	@RequestMapping(value = "/valute", method = RequestMethod.GET)
-	public ResponseEntity<Object> valute() throws Exception {
+	public ResponseEntity<Object> getValute() throws Exception {
 		return new ResponseEntity<>(PrincipalService.GetValute(), HttpStatus.OK);
 	}
 	
@@ -133,7 +133,7 @@ public class controller {
 	 * @throws Exception
 	 */
 	@RequestMapping(value = "/classifiche", method = RequestMethod.GET)
-	public ResponseEntity<Object> classificheScommesse() throws Exception{
+	public ResponseEntity<Object> getClassificheScommesse() throws Exception{
 		return new ResponseEntity<>(
 				service.getAllcurrencies(), HttpStatus.OK);
 	}
