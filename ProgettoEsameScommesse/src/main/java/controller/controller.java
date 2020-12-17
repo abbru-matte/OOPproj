@@ -38,7 +38,7 @@ public class controller {
 	@Autowired
 	PrincipalService service;
 	
-	
+ 
 	/**
 	 * Metodo che ci restituisce tutti gli scambi possibili
 	 * @return
