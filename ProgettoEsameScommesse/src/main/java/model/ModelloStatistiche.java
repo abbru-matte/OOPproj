@@ -16,24 +16,29 @@ public class ModelloStatistiche {
 	
 	private ArrayList<Double> Values;
 
-	private Double Media;
+	private	static Double Media;
 	
 	private Double Varianza;
 
 	private Double DeviazioneStandard;
+	
+	private String Message;
 
 	/**
-	 * @param vet 
+	 * @param values
 	 * @param media
 	 * @param varianza
 	 * @param deviazioneStandard
+	 * @param message
 	 */
-	public ModelloStatistiche(ArrayList<Double> vet, Double media, Double varianza, Double deviazioneStandard) {
+	public ModelloStatistiche(ArrayList<Double> values, Double media, Double varianza, Double deviazioneStandard,
+			String message) {
 		super();
-		Values = vet;
+		Values = values;
 		Media = media;
 		Varianza = varianza;
 		DeviazioneStandard = deviazioneStandard;
+		Message = message;
 	}
 
 	public ArrayList<Double> getValues() {
@@ -44,7 +49,7 @@ public class ModelloStatistiche {
 		Values = values;
 	}
 
-	public Double getMedia() {
+	public static Double getMedia() {
 		return Media;
 	}
 
@@ -67,6 +72,16 @@ public class ModelloStatistiche {
 	public void setDeviazioneStandard(Double deviazioneStandard) {
 		DeviazioneStandard = deviazioneStandard;
 	}
+
+	public String getMessage() {
+		return Message;
+	}
+
+	public void setMessage(String message) {
+		Message = message;
+	}
+	
+	
 
 	
 

@@ -17,7 +17,7 @@ public class NoParam extends ExcAbstract {
 	@Override
 	public String getMessage() {
 		
-		return "Parametro mancante.";
+		return "Parametro errato!";
 	}
 
 }

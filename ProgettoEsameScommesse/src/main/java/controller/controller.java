@@ -20,6 +20,7 @@ import Exceptions.GestoreException;
 import Exceptions.IntervalloDataErrato;
 import database.DatabaseHistorical;
 import model.Bet;
+import model.BetList;
 import service.PrincipalService;
 
 /**
@@ -36,15 +37,42 @@ public class controller {
 	 */
 	@Autowired
 	PrincipalService service;
+	
+	
 	/**
 	 * Metodo che ci restituisce tutti gli scambi possibili
 	 * @return
 	 * @throws Exception
 	 */
-	
 	@RequestMapping(value = "/valute", method = RequestMethod.GET)
 	public ResponseEntity<Object> valute() throws Exception {
 		return new ResponseEntity<>(PrincipalService.GetValute(), HttpStatus.OK);
+	}
+	
+	
+	
+	/**
+	 * Metodo che restituisce i metadati
+	 * @return
+	 * @throws Exception
+	 */
+	@RequestMapping(value = "/metadati", method = RequestMethod.GET)
+	public ResponseEntity<Object> getMetadati() throws Exception {
+	return new ResponseEntity<>(service.getMetadati(), HttpStatus.OK);
+	}
+	
+	
+	/**
+	 * Metodo che restituisce le quote di scommessa per una valuta scelta
+	 * 
+	 * @param currency
+	 * @return 
+	 * @throws Exception
+	 */
+	@RequestMapping(value = "/quotes", method = RequestMethod.GET)
+	public ResponseEntity<Object> getBetQuotes(@RequestParam(name = "currency", defaultValue = "") String currency)
+		throws Exception{
+		return new ResponseEntity<>(PrincipalService.getMessaggio(currency), HttpStatus.OK);
 	}
 	
 	
@@ -60,14 +88,17 @@ public class controller {
 	 */
 	@RequestMapping(value = "/bet", method = RequestMethod.POST)
 	public ResponseEntity<Object> postBet(@RequestBody Bet bet) throws Exception {
-		PrincipalService.PlaceBet(bet);
+		service.PlaceBet(bet);
+		service.updateCurrencies(bet);
 		return new ResponseEntity<>(
 				"Your bet has been placed successfully", HttpStatus.CREATED);
 	}
 	
+	
+	
 	/**
-	 * 
-	 * @return ritorna tutte le scommesse inserite precedentemente
+	 * Metodo che restituisce tutte le scommesse inserite precedentemente
+	 * @return 
 	 * @throws Exception
 	 */
 	
@@ -93,8 +124,24 @@ public class controller {
 			throws Exception {
 		return new ResponseEntity<Object>(PrincipalService.GetValoriStorici(from, to, currencies), HttpStatus.OK);
 	}
+	
+	
+	
 	/**
-	 * 
+	 * Metodo che filtra le valute in base alla quantità scommessa dagli utenti
+	 * @return 
+	 * @throws Exception
+	 */
+	@RequestMapping(value = "/classifiche", method = RequestMethod.GET)
+	public ResponseEntity<Object> classificheScommesse() throws Exception{
+		return new ResponseEntity<>(
+				service.getAllcurrencies(), HttpStatus.OK);
+	}
+	
+	
+	
+	/**
+	 * Metodo che restituisce le statistiche
 	 * @param from indica la data d'inizio
 	 * @param to indica la data di fine
 	 * @param currencies indica la valuta scelta
@@ -112,6 +159,20 @@ public class controller {
 		return new ResponseEntity<Object>(PrincipalService.getStatistics(from, to, currencies), HttpStatus.OK);
 
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	/**

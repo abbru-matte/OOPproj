@@ -1,5 +1,6 @@
 package model;
 
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -13,14 +14,14 @@ import java.util.Map;
 
 public class BetList {
 
-	private static Map<String, Bet> betlist= new LinkedHashMap<>();
+	private static Map<Integer, Bet> betlist= new HashMap<>();
 
-	public static Map<String, Bet> getBetlist() {
+	public static Map<Integer, Bet> getBetlist() {
 		return betlist;
 	}
 
 	public static void setBetlist(Bet b) {
 		betlist.put(b.getIdBet(), b);
-	}	
+	}
 	
 }

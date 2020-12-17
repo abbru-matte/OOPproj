@@ -58,6 +58,14 @@ public class DateService {
     	return simpleDateFormat.format(cal.getTime());
 	}
 	
+	
+	public static String PreviousWeek() {
+    	Calendar cal = new GregorianCalendar();
+    	cal.add(Calendar.WEEK_OF_MONTH, -2);
+    	SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+    	return simpleDateFormat.format(cal.getTime());
+	}
+	
 	/**
 	 * Metodo che a partire da una data d'inizio e una data di fine
 	 * ci da un ArrayList che contiene l'insieme delle date 

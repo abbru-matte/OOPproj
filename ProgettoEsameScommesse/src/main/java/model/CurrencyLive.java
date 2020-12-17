@@ -12,7 +12,7 @@ import java.util.Map;
  *
  */
 
-public class currencyLive {
+public class CurrencyLive {
 	public Boolean success;
 	public String terms;
 	public String privacy;
@@ -21,7 +21,7 @@ public class currencyLive {
 	public String source;
 	public Map<String, Double> quotes = new HashMap<String, Double>();
 	
-	public currencyLive() {
+	public CurrencyLive() {
 		this.success = true;
 		this.terms = null;
 		this.privacy = null;
@@ -39,7 +39,7 @@ public class currencyLive {
 	 * @param source
 	 * @param quotes
 	 */
-	public currencyLive(Boolean success, String terms, String privacy, String date,
+	public CurrencyLive(Boolean success, String terms, String privacy, String date,
 			Integer timestamp, String source, Map<String, Double> quotes) {
 		super();
 		this.success = success;

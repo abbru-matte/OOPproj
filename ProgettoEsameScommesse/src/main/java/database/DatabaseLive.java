@@ -8,8 +8,7 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
 import com.google.gson.Gson;
-import model.currencyHistorical;
-import model.currencyLive;
+import model.CurrencyLive;
 
 /**
  * 
@@ -20,11 +19,11 @@ import model.currencyLive;
 
 public class DatabaseLive {
 	
-	public static final String ACCESS_KEY = "568cb386a5b16ba22a7a0a99b0f08f54";
+	public static final String ACCESS_KEY = "df67a19946a6f06aa0ad368c10e9f32e";
     public static final String BASE_URL = "http://api.currencylayer.com/";
     public static final String ENDPOINT = "live";
 
-    public static ArrayList<currencyHistorical> datas =new ArrayList<currencyHistorical>();
+    public static ArrayList<CurrencyLive> datas =new ArrayList<CurrencyLive>();
     
     /**
      * Metodo che legge i dati dall'url e restituisce il tasso di cambio
@@ -36,7 +35,7 @@ public class DatabaseLive {
 
 	public static ArrayList<String> ValuteLive() throws Exception{
 		
-		currencyHistorical p = new currencyHistorical();
+		CurrencyLive p = new CurrencyLive();
 			
 		try {
 			URL url = new URL(BASE_URL + ENDPOINT + "?access_key=" + ACCESS_KEY  );
@@ -56,7 +55,7 @@ public class DatabaseLive {
 			   in.close();
 			 }
 			 Gson g = new Gson(); 
-			 p = g.fromJson(dati, currencyHistorical.class);
+			 p = g.fromJson(dati, CurrencyLive.class);
 			 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -80,7 +79,7 @@ public class DatabaseLive {
 	
 public static Double ValutaSceltaLive(String currency) throws Exception{
 		
-		currencyLive p = new currencyLive();
+	CurrencyLive p = new CurrencyLive();
 			
 		try {
 			URL url = new URL(BASE_URL + ENDPOINT + "?access_key=" + ACCESS_KEY + "&currencies" + currency);
@@ -100,7 +99,7 @@ public static Double ValutaSceltaLive(String currency) throws Exception{
 			   in.close();
 			 }
 			 Gson g = new Gson(); 
-			 p = g.fromJson(dati, currencyLive.class);
+			 p = g.fromJson(dati, CurrencyLive.class);
 			 
 		} catch (IOException e) {
 			e.printStackTrace();
