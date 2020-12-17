@@ -16,13 +16,13 @@ import service.DateService;
 
 
 /**
- * 
+ *Classe che contiene il metodo per ricavare i valori storici delle valuta 
  *
  *@author Murtezi Adrian & Abbruzzetti Matteo
  *
  */
 public class DatabaseHistorical {
-	public static final String ACCESS_KEY = "df67a19946a6f06aa0ad368c10e9f32e";
+	public static final String ACCESS_KEY = "c93d78b47a583604031cef64872013fc";
     public static final String BASE_URL = "http://api.currencylayer.com/";
     public static final String ENDPOINT = "historical";
    

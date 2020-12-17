@@ -4,7 +4,6 @@ import java.util.Date;
 import java.util.HashMap;
 
 import Exceptions.FormatoData;
-import Exceptions.NoValuta;
 import Statistiche.HashMapStats;
 import Statistiche.Statistiche;
 import database.DatabaseHistorical;
@@ -120,7 +119,4 @@ public class Bet {
 		}
 		return bool;
 	}	
-	
-	
-	
 }

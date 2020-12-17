@@ -50,9 +50,7 @@ public class Currency {
 		this.betAmount = betAmount;
 	}
 	
-	public void sommaAmount(Bet b) {
-		betAmount += b.getAmount();
-	}
+	
 	
 
 }

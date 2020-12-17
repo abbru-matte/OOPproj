@@ -87,7 +87,7 @@ public class controller {
 	 * @throws Exception
 	 */
 	@RequestMapping(value = "/bet", method = RequestMethod.POST)
-	public ResponseEntity<Object> postBet(@RequestBody Bet bet) throws Exception {
+	public ResponseEntity<Object> postBet(@RequestBody Bet bet) throws Exception{
 		service.PlaceBet(bet);
 		service.updateCurrencies(bet);
 		return new ResponseEntity<>(
@@ -121,7 +121,7 @@ public class controller {
 	public ResponseEntity<Object> GetValoriStorici(@RequestParam(name = "from", defaultValue = "") String from,
 			@RequestParam(name = "to", defaultValue = "") String to,
 			@RequestParam(name = "currencies", defaultValue = "") String currencies)
-			throws Exception {
+			throws Exception, IntervalloDataErrato {
 		return new ResponseEntity<Object>(PrincipalService.GetValoriStorici(from, to, currencies), HttpStatus.OK);
 	}
 	

@@ -11,7 +11,8 @@ import com.google.gson.Gson;
 import model.CurrencyLive;
 
 /**
- * 
+ * Classe che contiene i metodi per ricavare i possibili scambi 
+ * USD e le altre valute e il valore live tra USD e una valuta scelta.
  * 
  *  @author Murtezi Adrian & Abbruzzetti Matteo
  *
@@ -19,14 +20,14 @@ import model.CurrencyLive;
 
 public class DatabaseLive {
 	
-	public static final String ACCESS_KEY = "df67a19946a6f06aa0ad368c10e9f32e";
+	public static final String ACCESS_KEY = "c93d78b47a583604031cef64872013fc";
     public static final String BASE_URL = "http://api.currencylayer.com/";
     public static final String ENDPOINT = "live";
 
     public static ArrayList<CurrencyLive> datas =new ArrayList<CurrencyLive>();
     
     /**
-     * Metodo che legge i dati dall'url e restituisce il tasso di cambio
+     * Metodo che legge i dati dall'url e restituisce gli scambi possibili
      * tra USD e tutte le altre valute
      * 
      * @return ritorna un ArrayList contenente tutti i possibili scambi

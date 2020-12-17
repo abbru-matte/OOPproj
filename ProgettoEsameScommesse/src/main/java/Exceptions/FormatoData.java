@@ -30,6 +30,7 @@ public class FormatoData {
 	 * @throws Exception : lancia un'eccezione se non rispetta il formato
 	 *                   predefinito.
 	 */
+	
 	public static Date parsingData(String dataDaParsare) throws ParseException{
 		Date sdf =  new SimpleDateFormat("yyyy-MM-dd").parse(dataDaParsare);
 		
