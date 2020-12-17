@@ -10,7 +10,6 @@ import java.util.Vector;
  * 
  * @author Murtezi Adrian & Abbruzzetti Matteo
  *
- *
  */
 
 public class ModelloStatistiche {
