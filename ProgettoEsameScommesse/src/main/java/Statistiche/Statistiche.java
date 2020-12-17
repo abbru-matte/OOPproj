@@ -57,34 +57,6 @@ public class Statistiche {
 	public static double DeviazioneStandard(ArrayList<Double> vet) {
 		return Math.sqrt(varianza(vet));
 	}
-	/*
 	
-		
-		//Metodo che effettua il calcolo del tasso di cambio tra due valute(storiche) in un certo periodo(tra due date)
-		public static ArrayList<Double> CalcolaTassoHistorical( ArrayList<currencyHistorical> ArrHis, String code, String code2) throws JSONException, IOException {
-
-			double rateCode = 0;
-			double ratecode2 = 0;
-			ArrayList<Double> ch = new ArrayList<Double>();
-			for(currencyHistorical his : ArrHis) {
-			rateCode = his.getQuotes().get(defaultcurrency + code);
-			ratecode2 = his.getQuotes().get(defaultcurrency + code2);
-			Double finalrate = ratecode2 / rateCode;
-			ch.add(finalrate);
-			}
-			
-			return ch;
-		}
-
-		*/
-		
-			
-			
-			
-			
-			
-			
-			
-		
 
 }
