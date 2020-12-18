@@ -41,4 +41,5 @@ Per quanto riguarda la richiesta POST della rotta /bet è necessario inserire un
 - l'importo che l'utente vuole puntare.
 Di seguito un esempio per capire meglio come viene effettuata la scommessa: 
 
+
 ![alt text](https://github.com/abbru-matte/OOPproj/blob/master/Screenshots/RichiestaPOSTdiBet.png)
