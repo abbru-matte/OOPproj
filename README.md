@@ -47,9 +47,9 @@ Di seguito un esempio per capire meglio come viene effettuata la scommessa:
 Nel caso in cui l'utente inserisca un importo minore o uguale a zero, verrà restituito un messaggio d'errore e la scommessa non verrà piazzata.
 Il messaggio di errore verrà visualizzato in questo modo: [Esempio](https://github.com/abbru-matte/OOPproj/blob/master/Screenshots/ImportoErrato.png).
 
-##Parametri##
+## Parametri
 
-Nella rotta /quotes nel parametro **currency** l'utente specifica la valuta di cui vuole conoscerne le quote di scommessa.
+Nella rotta /quotes nel parametro **currency** l'utente specifica la valuta di cui vuole conoscerne le quote di scommessa.<br>
 Nelle rotte /valoristorici e /currencies/statistics i parametri **from** e **to** indicano rispettivamente le date d'inizio e di fine del periodo che l'utente vuole analizzare, i quali devono essere inseriti nel formato "yyyy-MM-dd"; nel parametro **currencies** l'utente può specificare le valute delle quali desidera visualizzare i valori storici e le statistiche. Se questo parametro viene lasciato vuoto verranno visualizzati i dati per tutte le valute.
 
 Nel caso in cui l'utente inserisca nel parametro **to** una data antecedente a quella inserita nel parametro from, verrà visualizzato un messaggio di errore.
