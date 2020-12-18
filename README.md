@@ -13,13 +13,13 @@ L'applicazione crea un server locale all'indirizzo:
 **http://localhost:8080**
 
 A tale indirizzo il cliente può fare delle richieste **GET** e **POST** per effettuare diverse operazioni:
-1. restituzione di tutti i possibili cambi di valute da USD a qualsiasi altra moneta.
+1. restituzione di tutti i possibili cambi di valute da USD, che è la moneta di default per il piano gratuito di CurrencyLayer, a qualsiasi altra moneta.
 2. restituzione dei **metadati**, ovvero l'elenco degli attributi e del tipo.
-3. restituzione delle **quote** di scommessa per ogni valuta.
-4. creazione di una scommessa e visualizzazione dell'elenco di tutte le scommesse effettuate.
-5. restituzione dei tassi di cambio del dollaro in determinato periodo.
-6. restituzione di un elenco ordinato delle valute in base alla quantità scommessa.
-7. restituzione delle statistiche richieste sulle valute.
+3. restituzione delle **quote** di scommessa per ogni valuta. Ogni quota viene calcolata mediante un algoritmo, basato sull'andamento della valuta nelle ultime due settimane; ovviamente, la quota non potrà mai essere inferiore ad 1.01.
+4. creazione di una scommessa e visualizzazione dell'elenco di tutte le scommesse effettuate. Nell'elenco vengono visualizzati l'id della scommessa, la valuta su cui ha scommesso, il segno scelto, la quota di scommessa, l'importo che ha giocato, la potenziale vincita e la data in cui è stata effettuata.
+5. restituzione dei tassi di cambio del dollaro in un determinato periodo.
+6. restituzione di un elenco ordinato delle valute in base alla quantità scommessa. Le valute vengono ordinate in modo decrescente in base alla somma dei vari importi delle scommesse su quella valuta.
+7. restituzione delle statistiche richieste sulle valute: i valori di cambio, la media, la varianza e la deviazione standard in un determinato periodo di tempo. Inoltre viene stampato un messaggio che informa l'utente se la quotazione attuale della valuta è maggiore o minore della media mensile.
 
 La seguente tabella spiega nel dettaglio come effettuare le diverse richieste all'interno di Postman:
 
@@ -52,8 +52,10 @@ Il messaggio di errore verrà visualizzato in questo modo: [Esempio](https://git
 Nella rotta /quotes nel parametro **currency** l'utente specifica la valuta di cui vuole conoscerne le quote di scommessa.<br>
 Nelle rotte /valoristorici e /currencies/statistics i parametri **from** e **to** indicano rispettivamente le date d'inizio e di fine del periodo che l'utente vuole analizzare, i quali devono essere inseriti nel formato "yyyy-MM-dd"; nel parametro **currencies** l'utente può specificare le valute delle quali desidera visualizzare i valori storici e le statistiche. Se questo parametro viene lasciato vuoto verranno visualizzati i dati per tutte le valute.
 
-Nel caso in cui l'utente inserisca nel parametro **to** una data antecedente a quella inserita nel parametro from, verrà visualizzato un messaggio di errore.
+Nel caso in cui l'utente inserisca nel parametro **to** una data antecedente a quella inserita nel parametro from, verrà visualizzato un messaggio di errore.<br>
 Il messaggio di errore verrà visualizzato in questo modo: [Esempio](https://github.com/abbru-matte/OOPproj/blob/master/Screenshots/DataErrata.png)
+
+
 
 
 
