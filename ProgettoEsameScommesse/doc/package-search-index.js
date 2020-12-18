@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.ProgettoEsameScommesse"},{"l":"controller"},{"l":"database"},{"l":"Exceptions"},{"l":"model"},{"l":"service"},{"l":"Statistiche"}];updateSearchResults();
