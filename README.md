@@ -56,7 +56,7 @@ Nel caso in cui l'utente inserisca nel parametro **to** una data antecedente a q
 Il messaggio di errore verrà visualizzato in questo modo: [Esempio](https://github.com/abbru-matte/OOPproj/blob/master/Screenshots/DataErrata.png)
 
 ## Diagrammi UML
-### Diagramma dei casi d'uso
+### Diagramma dei casi d'uso 
 ![alt text](https://github.com/abbru-matte/OOPproj/blob/master/UML/UseCaseDiagram.png)
 
 ### Diagrammi delle classi
