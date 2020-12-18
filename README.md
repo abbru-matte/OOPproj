@@ -38,8 +38,7 @@ La seguente tabella spiega nel dettaglio come effettuare le diverse richieste al
 Per quanto riguarda la richiesta POST della rotta /bet è necessario inserire un body in formato Json dove vengono specificati: 
 - la valuta su cui l'utente vuole scommettere;
 - il segno scelto (1 se prevede che il valore della valuta salirà, 2 se prevede che il valore della valuta scenderà);
-- l'importo che l'utente vuole puntare.
+- l'importo che l'utente vuole puntare.<br>
 Di seguito un esempio per capire meglio come viene effettuata la scommessa: 
-
 
 ![alt text](https://github.com/abbru-matte/OOPproj/blob/master/Screenshots/RichiestaPOSTdiBet.png)
