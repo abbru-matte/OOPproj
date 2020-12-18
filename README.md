@@ -49,13 +49,60 @@ Il messaggio di errore verrà visualizzato in questo modo: [Esempio](https://git
 
 ## Parametri
 
-Nella rotta /quotes nel parametro **currency** l'utente specifica la valuta di cui vuole conoscerne le quote di scommessa.<br>
-Nelle rotte /valoristorici e /currencies/statistics i parametri **from** e **to** indicano rispettivamente le date d'inizio e di fine del periodo che l'utente vuole analizzare, i quali devono essere inseriti nel formato "yyyy-MM-dd"; nel parametro **currencies** l'utente può specificare le valute delle quali desidera visualizzare i valori storici e le statistiche. Se questo parametro viene lasciato vuoto verranno visualizzati i dati per tutte le valute.
+Nella rotta "/quotes" nel parametro **currency** l'utente specifica la valuta di cui vuole conoscerne le quote di scommessa.<br>
+Nelle rotte "/valoristorici" e "/currencies/statistics" i parametri **from** e **to** indicano rispettivamente le date d'inizio e di fine del periodo che l'utente vuole analizzare, i quali devono essere inseriti nel formato "yyyy-MM-dd"; nel parametro **currencies** l'utente può specificare le valute delle quali desidera visualizzare i valori storici e le statistiche. Se questo parametro viene lasciato vuoto verranno visualizzati i dati per tutte le valute.
 
 Nel caso in cui l'utente inserisca nel parametro **to** una data antecedente a quella inserita nel parametro from, verrà visualizzato un messaggio di errore.<br>
 Il messaggio di errore verrà visualizzato in questo modo: [Esempio](https://github.com/abbru-matte/OOPproj/blob/master/Screenshots/DataErrata.png)
 
+## Diagrammi UML
+### Diagramma dei casi d'uso
+![alt text](https://github.com/abbru-matte/OOPproj/blob/master/UML/UseCaseDiagram.png)
 
+### Diagrammi delle classi
+**package com.ProgettoEsameScommesse:**
+![alt text](https://github.com/abbru-matte/OOPproj/blob/master/UML/ClassDiagramApplication.png)
 
+**package controller:**
+![alt text](https://github.com/abbru-matte/OOPproj/blob/master/UML/ClassDiagramController.png)
 
+**package service:**
+![alt text](https://github.com/abbru-matte/OOPproj/blob/master/UML/ClassDiagramService.png)
+
+**package database**
+![alt text](https://github.com/abbru-matte/OOPproj/blob/master/UML/ClassDiagramDatabase.png)
+
+**package Exceptions**
+![alt text](https://github.com/abbru-matte/OOPproj/blob/master/UML/ClassDiagramExceptions.png)
+
+**package model**
+![alt text](https://github.com/abbru-matte/OOPproj/blob/master/UML/ClassDiagramModel.png)
+
+**package Statistiche**
+![alt text](https://github.com/abbru-matte/OOPproj/blob/master/UML/ClassDiagramStatistiche.png)
+
+### Diagrammi delle sequenze
+**getValute**
+![alt text](https://github.com/abbru-matte/OOPproj/blob/master/UML/getValute.png)
+
+**getMetadati**
+![alt text](https://github.com/abbru-matte/OOPproj/blob/master/UML/getMetadati.png)
+
+**getBetQuotes**
+![alt text](https://github.com/abbru-matte/OOPproj/blob/master/UML/getBetQuotes.png)
+
+**postBet**
+![alt text](https://github.com/abbru-matte/OOPproj/blob/master/UML/postBet.png)
+
+**getBet**
+![alt text](https://github.com/abbru-matte/OOPproj/blob/master/UML/getBet.png)
+
+**getValoriStorici**
+![alt text](https://github.com/abbru-matte/OOPproj/blob/master/UML/getValoriStorici.png)
+
+**getClassificheScommesse**
+![alt text](https://github.com/abbru-matte/OOPproj/blob/master/UML/getClassificheScommesse.png)
+
+**getStatistics**
+![alt text](https://github.com/abbru-matte/OOPproj/blob/master/UML/getStatistics.png)
 
