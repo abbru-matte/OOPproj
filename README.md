@@ -83,26 +83,34 @@ Il messaggio di errore verrà visualizzato in questo modo: [Esempio](https://git
 
 ### Diagrammi delle sequenze
 **getValute**<br>
+
 ![alt text](https://github.com/abbru-matte/OOPproj/blob/master/UML/getValute.png)
 
 **getMetadati**<br>
+
 ![alt text](https://github.com/abbru-matte/OOPproj/blob/master/UML/getMetadati.png)
 
 **getBetQuotes**<br>
+
 ![alt text](https://github.com/abbru-matte/OOPproj/blob/master/UML/getBetQuotes.png)
 
 **postBet**<br>
+
 ![alt text](https://github.com/abbru-matte/OOPproj/blob/master/UML/postBet.png)
 
 **getBet**<br>
+
 ![alt text](https://github.com/abbru-matte/OOPproj/blob/master/UML/getBet.png)
 
 **getValoriStorici**<br>
+
 ![alt text](https://github.com/abbru-matte/OOPproj/blob/master/UML/getValoriStorici.png)
 
 **getClassificheScommesse**<br>
+
 ![alt text](https://github.com/abbru-matte/OOPproj/blob/master/UML/getClassificheScommesse.png)
 
 **getStatistics**<br>
+
 ![alt text](https://github.com/abbru-matte/OOPproj/blob/master/UML/getStatistics.png)
 
