@@ -4,7 +4,7 @@ Questo repository contiene il progetto per l'esame di Programmazione ad Oggetti 
 
 ## Introduzione
 
-Il progetto è stato sviluppato utilizzando SpringBoot Application tramite l'IDE Eclipse.
+Il progetto è stato sviluppato utilizzando SpringBoot Application tramite l'IDE Eclipse.<br>
 L'obiettivo del progetto è quello di creare un sito per scommettere sull'andamento delle valute. In particolare sarà possibile scommettere se una determinata valuta andrà ad aumentare o diminuire il proprio valore nel giorno successivo. Per questo motivo il sito offrirà al cliente due quote di scommessa per ogni valuta, generate tramite un semplice algoritmo, basato sulla media della valuta calcolata nelle ultime due settimane. Per calcolare questa media, i valori delle valute vengono presi dal sito di www.currencylayer.com.
 
 ## Funzionamento dell'applicazione
@@ -60,49 +60,49 @@ Il messaggio di errore verrà visualizzato in questo modo: [Esempio](https://git
 ![alt text](https://github.com/abbru-matte/OOPproj/blob/master/UML/UseCaseDiagram.png)
 
 ### Diagrammi delle classi
-**package com.ProgettoEsameScommesse:**
+**package com.ProgettoEsameScommesse:**<br>
 ![alt text](https://github.com/abbru-matte/OOPproj/blob/master/UML/ClassDiagramApplication.png)
 
-**package controller:**
+**package controller:**<br>
 ![alt text](https://github.com/abbru-matte/OOPproj/blob/master/UML/ClassDiagramController.png)
 
-**package service:**
+**package service:**<br>
 ![alt text](https://github.com/abbru-matte/OOPproj/blob/master/UML/ClassDiagramService.png)
 
-**package database**
+**package database:**<br>
 ![alt text](https://github.com/abbru-matte/OOPproj/blob/master/UML/ClassDiagramDatabase.png)
 
-**package Exceptions**
+**package Exceptions:**<br>
 ![alt text](https://github.com/abbru-matte/OOPproj/blob/master/UML/ClassDiagramExceptions.png)
 
-**package model**
+**package model:**<br>
 ![alt text](https://github.com/abbru-matte/OOPproj/blob/master/UML/ClassDiagramModel.png)
 
-**package Statistiche**
+**package Statistiche:**<br>
 ![alt text](https://github.com/abbru-matte/OOPproj/blob/master/UML/ClassDiagramStatistiche.png)
 
 ### Diagrammi delle sequenze
-**getValute**
+**getValute**<br>
 ![alt text](https://github.com/abbru-matte/OOPproj/blob/master/UML/getValute.png)
 
-**getMetadati**
+**getMetadati**<br>
 ![alt text](https://github.com/abbru-matte/OOPproj/blob/master/UML/getMetadati.png)
 
-**getBetQuotes**
+**getBetQuotes**<br>
 ![alt text](https://github.com/abbru-matte/OOPproj/blob/master/UML/getBetQuotes.png)
 
-**postBet**
+**postBet**<br>
 ![alt text](https://github.com/abbru-matte/OOPproj/blob/master/UML/postBet.png)
 
-**getBet**
+**getBet**<br>
 ![alt text](https://github.com/abbru-matte/OOPproj/blob/master/UML/getBet.png)
 
-**getValoriStorici**
+**getValoriStorici**<br>
 ![alt text](https://github.com/abbru-matte/OOPproj/blob/master/UML/getValoriStorici.png)
 
-**getClassificheScommesse**
+**getClassificheScommesse**<br>
 ![alt text](https://github.com/abbru-matte/OOPproj/blob/master/UML/getClassificheScommesse.png)
 
-**getStatistics**
+**getStatistics**<br>
 ![alt text](https://github.com/abbru-matte/OOPproj/blob/master/UML/getStatistics.png)
 
