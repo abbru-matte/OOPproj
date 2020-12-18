@@ -21,7 +21,7 @@ A tale indirizzo il cliente può fare delle richieste **GET** e **POST** per eff
 6. restituzione di un elenco ordinato delle valute in base alla quantità scommessa.
 7. restituzione delle statistiche richieste sulle valute.
 
-La seguente tabelle spiega nel dettaglio come effettuare le diverse richieste all'interno di Postman:
+La seguente tabella spiega nel dettaglio come effettuare le diverse richieste all'interno di Postman:
 
 | **Rotta** | **Metodo** | **Parametri** | **Descrizione**|
 | --- | --- | --- | --- |
@@ -34,3 +34,11 @@ La seguente tabelle spiega nel dettaglio come effettuare le diverse richieste al
 | /classifiche | GET | Non richiesti | Restituisce una classifica delle valute più scommesse |
 | /currencies/statistics | GET | from,to,currencies | Restituisce le statistiche di una o più valute |
 <br>
+
+Per quanto riguarda la richiesta POST della rotta /bet è necessario inserire un body in formato Json dove vengono specificati: 
+- la valuta su cui l'utente vuole scommettere;
+- il segno scelto (1 se prevede che il valore della valuta salirà, 2 se prevede che il valore della valuta scenderà);
+- l'importo che l'utente vuole puntare.
+Di seguito un esempio per capire meglio come viene effettuata la scommessa: 
+
+![alt text](https://github.com/abbru-matte/OOPproj/blob/master/Screenshots/RichiestaPOSTdiBet.png)
